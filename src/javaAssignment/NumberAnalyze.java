@@ -39,8 +39,8 @@ public class NumberAnalyze {
  */
     public static String check(){
         System.out.println("Enter The Number U Want To Check");
-        Scanner A=new Scanner(System.in);
-        int number=A.nextInt();
+        Scanner input=new Scanner(System.in);
+        int number=input.nextInt();
         if (number>0)
             return "Positive";
         else if (number<0) {
@@ -76,7 +76,7 @@ public class NumberAnalyze {
      * The menu continue to be displayed until the user selects the exit option.
      */
     static void main() {
-        Scanner Z = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         int Choice;
         do {
             System.out.println("====================");
@@ -87,7 +87,7 @@ public class NumberAnalyze {
             System.out.println("3-Check Number Type");
             System.out.println("4-Calculate Sum Between Two Numbers");
             System.out.println("5-Exit");
-            Choice = Z.nextInt();
+            Choice = input.nextInt();
             switch (Choice) {
                 case 1:
                     printing();
