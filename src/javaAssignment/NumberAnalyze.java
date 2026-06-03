@@ -52,18 +52,11 @@ public class NumberAnalyze {
 
 /*
  * Calculates the sum of two integer values.
- * @parm scanner A used to receive user input for firstnumber.
- * @parm scanner B used to receive user input for secondnumber.
- * @param firstnumber the first number to be added.
- * @param secondnumber the second number to be added.
+ * @param firstnumber the first number to be added by user.
+ * @param secondnumber the second number to be added by user.
  * @return result=the total result after adding both numbers.
  */
-    public static int calculateSum(){
-        Scanner input=new Scanner(System.in);
-        System.out.println("Enter First Number:");
-        int firstnumber=input.nextInt();
-        System.out.println("Enter Second Number:");
-        int secondnumber=input.nextInt();
+    public static int calculateSum(int firstnumber,int secondnumber){
         int result=firstnumber+secondnumber;
         return result;
     }
@@ -99,7 +92,12 @@ public class NumberAnalyze {
                     System.out.println(check());
                     break;
                 case 4:
-                    System.out.println("Sum="+calculateSum());
+                    Scanner inputnum=new Scanner(System.in);
+                    System.out.println("Enter First Number:");
+                    int firstnumber=inputnum.nextInt();
+                    System.out.println("Enter Second Number:");
+                    int secondnumber=inputnum.nextInt();
+                    System.out.println("Sum="+calculateSum(firstnumber,secondnumber));
                     break;
                 case 5:
                     System.out.println("Thank you for using Number Analyzer.");
